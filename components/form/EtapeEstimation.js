@@ -10,94 +10,39 @@ const EtapeEstimation = () => {
   useEffect(() => {
     setEtape([
       {
-        name: "Adresse",
-        done: clientInformation?.adresse ? true : false,
+        name: "Secteur",
+        done: stepInProgress > 1 ? true : false,
         select: stepInProgress === 1 ? true : false,
       },
       {
-        name: "Appartement/Maison",
-        done: clientInformation?.type ? true : false,
+        name: "Type de bien",
+        done: stepInProgress > 2 ? true : false,
         select: stepInProgress === 2 ? true : false,
       },
       {
-        name: "Surface",
-        done: clientInformation?.surface ? true : false,
+        name: "Situation personnelle",
+        done: stepInProgress > 3 ? true : false,
         select: stepInProgress === 3 ? true : false,
       },
       {
-        name: "Pièces",
-        done: clientInformation?.pieces ? true : false,
+        name: "Situation professionnelle",
+        done: stepInProgress > 4 ? true : false,
         select: stepInProgress === 4 ? true : false,
       },
       {
-        name: "Chambres",
-        done: clientInformation?.chambres ? true : false,
+        name: "Revenus fiscale de référence",
+        done: stepInProgress > 5 ? true : false,
         select: stepInProgress === 5 ? true : false,
       },
       {
-        name: "Année",
-        done: clientInformation?.annee ? true : false,
+        name: "Foyer fiscal",
+        done: stepInProgress > 6 ? true : false,
         select: stepInProgress === 6 ? true : false,
       },
-      clientInformation?.type === "Appartement"
-        ? {
-            name: "Niveaux / Étages",
-            done:
-              clientInformation?.etages && clientInformation?.niveaux
-                ? true
-                : false,
-            select: stepInProgress === 7 ? true : false,
-          }
-        : {
-            name: "Étages",
-            done: clientInformation?.etages ? true : false,
-            select: stepInProgress === 7 ? true : false,
-          },
-      {
-        name: "Espaces exterieurs",
-        done: stepInProgress >= 9 ? true : false,
-        select: stepInProgress === 8 ? true : false,
-      },
-      {
-        name: "Standing",
-        done: clientInformation?.standing ? true : false,
-        select: stepInProgress === 9 ? true : false,
-      },
-      {
-        name: "Vue / oriantation",
-        done:
-          clientInformation?.vue && clientInformation?.oriantation.length !== 0
-            ? true
-            : false,
-        select: stepInProgress === 10 ? true : false,
-      },
-      {
-        name: "Travaux",
-        done:
-          clientInformation?.travaux !== null &&
-          clientInformation?.travaux !== undefined
-            ? true
-            : false,
-        select: stepInProgress === 11 ? true : false,
-      },
-      {
-        name: "Atouts",
-        done: stepInProgress >= 12 ? true : false,
-        select: stepInProgress === 12 ? true : false,
-      },
-      {
-        name: "Classement energetique",
-        done: clientInformation?.dpe && clientInformation?.ges ? true : false,
-        select: stepInProgress === 13 ? true : false,
-      },
+
       {
         name: "Objectif",
-        done:
-          clientInformation?.contrat && clientInformation?.vente
-            ? true
-            : false && stepInProgress === 14
-            ? true
-            : false,
+        done: stepInProgress > 7 ? true : false,
         select: stepInProgress === 14 ? true : false,
       },
     ]);
@@ -105,7 +50,7 @@ const EtapeEstimation = () => {
   return (
     <div className="lg:block hidden">
       <h1 className="text-xl font-light mb-5">
-        Carractéristiques de votre bien
+        Informations concernant vos aides:
       </h1>
       <ul>
         {etape &&
