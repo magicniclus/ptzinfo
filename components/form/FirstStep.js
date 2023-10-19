@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import CardWithImg from "./cards/CardWithImg";
+import { useRouter } from "next/router";
 
 const FirstStep = () => {
   const [selectedType, setSelectedType] = useState(null);
   const [disabled, setDisabled] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     if (selectedType) {
@@ -13,13 +15,18 @@ const FirstStep = () => {
     }
   }, [selectedType]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    router.push(`/estimation`);
+  };
+
   return (
     <div className="w-full lg:w-6/12 flex flex-col mb-10 lg:mb-3 ">
       <h2 className="text-lg text-gray-700 w-8/12">
         Dans quelle departement souhaitez-vous acheter votre résidence
         principale ?
       </h2>
-      <form className="flex flex-col items-start mt-10">
+      <form className="flex flex-col items-start mt-10" onSubmit={handleSubmit}>
         <div className="flex flex-col">
           <CardWithImg
             onSelect={setSelectedType}
