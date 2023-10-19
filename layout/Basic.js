@@ -11,7 +11,7 @@ export default function Basic(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="w-full lg:flex lg:justify-between  max-w-[1250px] mx-auto relative">
+      <main className="w-full lg:flex lg:justify-between  max-w-[1250px] mx-auto relative flex-col">
         {props.children}
       </main>
       <Footer />
