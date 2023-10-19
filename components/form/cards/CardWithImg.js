@@ -35,7 +35,10 @@ const CardWithImg = (props) => {
       <div className={`${type === "maison" ? "lg:w-16 w-16" : "lg:w-12 w-10"}`}>
         <img src={`/${type === "gironde" ? "cardTest.png" : "cardTest.png"}`} />
       </div>
-      <p className="mt-3 lg:text-normal text-sm" style={{ color: "#3b82f6" }}>
+      <p
+        className="mt-3 lg:text-normal text-center text-sm"
+        style={{ color: "#3b82f6" }}
+      >
         {type === "gironde" ? "Gironde" : "Charente-Maritime"}
       </p>
       <div className="w-4 h-4 bg-gray-200 rounded-full absolute top-1 right-1">
