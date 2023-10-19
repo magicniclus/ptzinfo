@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CardWithImg from "../cards/CardWithImg";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+
 const AppartementMaison = () => {
   const dispatch = useDispatch();
   const [selectedType, setSelectedType] = useState(null);
@@ -11,13 +12,14 @@ const AppartementMaison = () => {
       payload: { type: selectedType },
     });
   }, [selectedType]);
+
   return (
     <>
       <h2
         className="text-2xl font-light lg:my-0 my-5"
         style={{ color: "#3b82f6" }}
       >
-        Type de bien :
+        Quel type de bien souhaitez-vous acquerir ?
       </h2>
       <div className="flex flex-col">
         {["Maison", "Appartement"].map((type, idx) => (
