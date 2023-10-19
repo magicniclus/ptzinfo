@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 export default function Basic(props) {
+  const height = props.height ? props.height : "";
   return (
     <div>
       <Head>
@@ -11,7 +12,9 @@ export default function Basic(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="w-full lg:flex lg:justify-between  max-w-[1250px] mx-auto relative flex-col">
+      <main
+        className={`w-full lg:flex lg:justify-between  max-w-[1250px] mx-auto relative flex-col ${height}`}
+      >
         {props.children}
       </main>
       <Footer />
