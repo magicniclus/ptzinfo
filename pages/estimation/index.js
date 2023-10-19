@@ -2,6 +2,7 @@ import React from "react";
 import Basic from "../../layout/Basic";
 import EtapeEstimation from "../../components/form/EtapeEstimation";
 import ContainerEstimation from "../../layout/ContainerEstimation";
+import EstimationManager from "../../components/form/EstimationManager";
 
 const index = () => {
   return (
@@ -17,7 +18,9 @@ const index = () => {
             </p>
           </div>
         </div>
-        <div className="w-full lg:w-6/12 min-h-[400px] lg:min-h-[500px] flex flex-col justify-between"></div>
+        <div className="w-0.5 min-h-[600px] bg-gray-100 lg:flex hidden" />
+        {/* <div className="w-full lg:w-6/12 min-h-[400px] lg:min-h-[500px] flex flex-col justify-between"></div> */}
+        <EstimationManager />
       </ContainerEstimation>
     </Basic>
   );
