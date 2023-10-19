@@ -36,7 +36,7 @@ const CardWithImg = (props) => {
         <img src={`/${type === "gironde" ? "cardTest.png" : "cardTest.png"}`} />
       </div> */}
       <p className=" lg:text-normal text-center" style={{ color: "#3b82f6" }}>
-        {type === "gironde" ? "Gironde" : "Charente-Maritime"}
+        {type === "gironde" ? "Gironde" : type}
       </p>
       <div className="relative w-5 h-5 bg-gray-200 rounded-full">
         <div
