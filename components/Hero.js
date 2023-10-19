@@ -27,7 +27,10 @@ const avantages = [
 
 const Hero = () => {
   return (
-    <div className="flex w-full justify-between items-center bg-gray-50 rounded-md mt-10 px-10">
+    <section
+      id="estimation"
+      className="flex w-full justify-between items-center bg-gray-50 rounded-md mt-0 lg:mt-10 lg:mb-10 px-6 lg:px-10 lg:flex-row flex-col"
+    >
       <div className="w-full lg:w-5/12 flex flex-col justify-center lg:min-h-[500px] lg:mb-0 mb-10 relative ">
         <div>
           <h1 className="lg:text-5xl text-2xl lg:w-11/12 mt-10 lg:mt-3 text-gray-700">
@@ -58,8 +61,10 @@ const Hero = () => {
           </ul>
         </div>
       </div>
+
+      <div className="w-9/12 h-0.5 bg-gray-100 lg:hidden flex mb-7 mt-0" />
       <FirstStep />
-    </div>
+    </section>
   );
 };
 
