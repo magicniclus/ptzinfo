@@ -14,7 +14,7 @@ const FirstStep = () => {
   }, [selectedType]);
 
   return (
-    <div className="w-full lg:w-6/12 flex flex-col">
+    <div className="w-full lg:w-6/12 flex flex-col mb-10 lg:mb-3 ">
       <h2 className="text-lg text-gray-700 w-8/12">
         Dans quelle souhaitez-vous acheter votre résidence principale ?
       </h2>
