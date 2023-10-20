@@ -9,33 +9,31 @@ import { useRouter } from "next/router";
 
 const index = () => {
   const [isLoading, setIsLoading] = useState(false);
-  //   const getUserAdresse = useSelector(
-  //     (state) => state?.clientInfomation?.adresse
-  //   );
+  const getUserType = useSelector((state) => state?.clientInfomation?.type);
 
   const router = useRouter();
 
-  //   useEffect(() => {
-  //     if (getUserAdresse) {
-  //       setIsLoading(true);
-  //     }
-  //   }, [getUserAdresse]);
+  useEffect(() => {
+    if (getUserType) {
+      setIsLoading(true);
+    }
+  }, [getUserType]);
 
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       if (!getUserAdresse) {
-  //         router.push({
-  //           pathname: "/",
-  //         });
-  //       }
-  //     }, 1000);
-  //   }, [getUserAdresse]);
+  useEffect(() => {
+    setTimeout(() => {
+      if (!getUserType) {
+        router.push({
+          pathname: "/",
+        });
+      }
+    }, 1000);
+  }, [getUserType]);
 
   return (
     <>
       <Basic height="min-h-[calc(100vh-78px)]">
         <ContainerEstimation>
-          {isLoading && (
+          {!isLoading && (
             <div className="fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-10">
               <Loader />
             </div>
