@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import CardWithImg from "./cards/CardWithImg";
 import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
 
 const FirstStep = () => {
+  const dispatch = useDispatch();
   const [selectedType, setSelectedType] = useState(null);
   const [disabled, setDisabled] = useState(true);
   const router = useRouter();
@@ -13,6 +15,13 @@ const FirstStep = () => {
     } else {
       setDisabled(true);
     }
+  }, [selectedType]);
+
+  useEffect(() => {
+    dispatch({
+      type: "SET_CLIENT_INFORMATION",
+      payload: { secteur: selectedType },
+    });
   }, [selectedType]);
 
   const handleSubmit = (e) => {
