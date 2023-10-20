@@ -41,7 +41,6 @@ const AnalyseLoader = () => {
 
   const handleRoute = () => {
     router.push(`/estimation/inscription`);
-    ("");
   };
 
   useEffect(() => {
