@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import { useRouter } from "next/router";
 
-import { useDispatch } from "react-redux";
-import { set } from "react-ga";
+import { useDispatch, useSelector } from "react-redux";
+
+import { writeUserData } from "../../firebase/dataManager";
 
 const FormulaireFinal = () => {
   const namePattern = /^[a-zA-Z]{2,}$/;
@@ -18,6 +19,19 @@ const FormulaireFinal = () => {
   const [phone, setPhone] = useState(""); // <- state pour le téléphone
 
   const dispatch = useDispatch();
+
+  const secteur = useSelector((state) => state.clientInfomation.secteur);
+  const type = useSelector((state) => state.clientInfomation.type);
+  const situationPersonnelle = useSelector(
+    (state) => state.clientInfomation.situationPersonnelle
+  );
+  const situationProfessionnelle = useSelector(
+    (state) => state.clientInfomation.situationProfessionnelle
+  );
+  const revenusFiscal = useSelector(
+    (state) => state.clientInfomation.revenusFiscal
+  );
+  const nbrDePart = useSelector((state) => state.clientInfomation.nbrDePart);
 
   const validateFields = () => {
     let isValid = true;
@@ -73,7 +87,25 @@ const FormulaireFinal = () => {
           phone,
         },
       });
-      // router.push(`/estimation/resultat`);
+      writeUserData(firstName, lastName, email, phone)
+        .then((res) => {
+          // writeCRMUserData(
+          //   firstName,
+          //   lastName,
+          //   email,
+          //   phone,
+          //   secteur,
+          //   type,
+          //   situationPersonnelle,
+          //   situationProfessionnelle,
+          //   revenusFiscal,
+          //   nbrDePart
+          // );
+          router.push(`/estimation/resultat`);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   };
 
@@ -84,6 +116,10 @@ const FormulaireFinal = () => {
       setIsDisabled(false);
     }
   }, [firstName, lastName, email, phone, isChecked]);
+
+  useEffect(() => {
+    if (!secteur) router.push("/");
+  }, []);
 
   return (
     <form onSubmit={handleSubmit} method="POST" className="w-full">
