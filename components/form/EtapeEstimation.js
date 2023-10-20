@@ -49,10 +49,10 @@ const EtapeEstimation = () => {
   }, [clientInformation, stepInProgress]);
   return (
     <div className="lg:block hidden">
-      <h1 className="text-xl font-light mb-5">
+      <h1 className="text-2xl font-light lg:my-0 my-5 lg:w-9/12">
         Informations concernant vos aides:
       </h1>
-      <ul>
+      <ul className="mt-10">
         {etape &&
           etape.map((item, index) => (
             <li
