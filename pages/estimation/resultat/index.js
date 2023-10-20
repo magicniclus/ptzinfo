@@ -5,7 +5,9 @@ const index = () => {
   return (
     <Basic height="min-h-[calc(100vh-78px)]">
       <div className="p-8 text-gray-700">
-        <h1 className="text-4xl font-bold my-10">NOUVEAU ZONAGE</h1>
+        <h1 className="text-4xl font-bold my-20 text-center text-blue-500">
+          NOUVEAU ZONAGE
+        </h1>
         <h2 className="text-2xl font-bold mb-4">
           ACCESSION A LA PROPRIETE : PTZ ET TVA REDUITE, LA COMBINAISON GAGNANTE
           POUR DEVENIR PROPRIETAIRE.
@@ -18,7 +20,7 @@ const index = () => {
           ouvrir les portes de votre futur logement neuf.
         </p>
 
-        <h2 className="text-xl font-bold mb-4">
+        <h2 className="text-xl font-bold mb-4 mt-10">
           Prêt à Taux Zéro (PTZ) : Conditions d'éligibilité et Plafonds
         </h2>
         <p className="mb-4">
@@ -160,7 +162,7 @@ const index = () => {
           et le montant du PTZ auquel vous pouvez prétendre.
         </p>
 
-        <h2 className="text-xl font-bold mb-4">
+        <h2 className="text-xl font-bold mb-4 mt-10">
           Prix en TVA réduite : les critères d’éligibilité et les plafonds de
           ressources requis
         </h2>
