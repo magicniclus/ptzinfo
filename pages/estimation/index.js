@@ -11,7 +11,7 @@ const index = () => {
         <div className=" flex flex-col justify-between  w-full lg:w-4/12">
           <EtapeEstimation />
           <div className="lg:block hidden">
-            <p className="text-xs font-light text-gray-400 mt-5">
+            <p className="text-xs font-light text-gray-400 mt-10">
               *Le résultat de cette estimation ne saurait remplacer une
               évaluation concrète. Nos algorithmes sont en constante
               amélioration pour refléter au mieux la réalité.
