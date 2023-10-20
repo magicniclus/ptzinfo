@@ -44,9 +44,9 @@ const AnalyseLoader = () => {
   };
 
   useEffect(() => {
-    // if (showCheckIconThree) {
-    //   handleRoute();
-    // }
+    if (showCheckIconThree) {
+      handleRoute();
+    }
   }, [showCheckIconThree]);
 
   return (
