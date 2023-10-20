@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Basic from "../../layout/Basic";
 import EtapeEstimation from "../../components/form/EtapeEstimation";
 import ContainerEstimation from "../../layout/ContainerEstimation";
 import EstimationManager from "../../components/form/EstimationManager";
+import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
 const index = () => {
+  const secteur = useSelector((state) => state.clientInfomation.secteur);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!secteur) router.push("/");
+  }, []);
+
   return (
     <Basic height="min-h-[calc(100vh-78px)]">
       <ContainerEstimation>
