@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import CardWithImg from "../cards/CardWithImg";
 import { useDispatch } from "react-redux";
 import Select from "../selected/Select";
 
