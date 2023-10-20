@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useRouter } from "next/router";
 
 import { useDispatch } from "react-redux";
+import { set } from "react-ga";
 
 const FormulaireFinal = () => {
   const namePattern = /^[a-zA-Z]{2,}$/;
+
+  const [disabled, setIsDisabled] = useState(false);
 
   const [isChecked, setIsChecked] = useState(false);
   const [errors, setErrors] = useState({});
@@ -70,9 +73,17 @@ const FormulaireFinal = () => {
           phone,
         },
       });
-      router.push(`/estimation/resultat`);
+      // router.push(`/estimation/resultat`);
     }
   };
+
+  useEffect(() => {
+    if (firstName && lastName && email && phone && isChecked) {
+      setIsDisabled(true);
+    } else {
+      setIsDisabled(false);
+    }
+  }, [firstName, lastName, email, phone, isChecked]);
 
   return (
     <form onSubmit={handleSubmit} method="POST" className="w-full">
@@ -187,9 +198,11 @@ const FormulaireFinal = () => {
           </div>
           <button
             type="submit"
-            className="rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 max-w-[170px] w-full bg-blue-500"
+            className={`rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 max-w-[170px] w-full ${
+              disabled ? "bg-blue-500" : "bg-blue-500/60"
+            }`}
           >
-            Voir mon estiamtion
+            Voir mon estimation
           </button>
         </div>
       </div>
