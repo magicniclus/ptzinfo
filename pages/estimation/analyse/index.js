@@ -4,12 +4,12 @@ import { useRouter } from "next/router";
 
 import { useSelector } from "react-redux";
 
-import ContainerEstimationTwo from "../../../components/layout/ContainerEstimationTwo";
-import EstimationLayout from "../../../components/layout/EstimationLayout";
-import AnalysePresentation from "../../../components/estimation/component/AnalysePresentation";
-import AnalyseLoader from "../../../components/estimation/component/AnalyseLoader";
+import ContainerEstimation from "../../../layout/ContainerEstimation";
+import Basic from "../../../layout/Basic";
+import AnalysePresentation from "../../../components/AnalysePresentation";
+import AnalyseLoader from "../../../components/AnalyseLoader";
 import Loader from "../../../components/loader/Loader";
-import HeaderWithoutNav from "../../../components/header/HeaderWithoutNav";
+import Header from "../../../components/Header";
 
 import Head from "next/head";
 
@@ -36,19 +36,19 @@ const index = () => {
     router.push(`/estimation/analyse`);
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (!clientInfomation) {
-        router.push({
-          pathname: "/",
-        });
-      }
-    }, 1000);
-  }, [clientInfomation]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (!clientInfomation) {
+  //       router.push({
+  //         pathname: "/",
+  //       });
+  //     }
+  //   }, 1000);
+  // }, [clientInfomation]);
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>
           Analyse des Données Avenue-Immo : Comprendre Votre Estimation
           Immobilière
@@ -81,11 +81,10 @@ const index = () => {
           rel="canonical"
           href="https://www.avenue-immo.com/estimation/analyse"
         />
-      </Head>
-      <HeaderWithoutNav />
-      <EstimationLayout>
-        <ContainerEstimationTwo>
-          {!isLoading && (
+      </Head> */}
+      <Basic height="min-h-[calc(100vh-78px)]">
+        <ContainerEstimation>
+          {isLoading && (
             <div className="fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-10">
               <Loader />
             </div>
@@ -97,8 +96,8 @@ const index = () => {
           <div className="w-0.5 min-h-[600px] bg-gray-100 lg:flex hidden" />
           {/* <div className="w-full h-0.5 bg-gray-100 lg:hidden flex mt-7 lg:mt-0" /> */}
           <AnalyseLoader />
-        </ContainerEstimationTwo>
-      </EstimationLayout>
+        </ContainerEstimation>
+      </Basic>
     </>
   );
 };
