@@ -1,7 +1,7 @@
 import {
-  BuildingOffice2Icon,
   ArrowTrendingUpIcon,
   CloudArrowUpIcon,
+  HandThumbUpIcon,
 } from "@heroicons/react/20/solid";
 import React from "react";
 import { useSelector } from "react-redux";
@@ -13,18 +13,8 @@ const Avantages = () => {
   );
   const avantages = [
     {
-      title: "Estimation gratuite",
-      text: "Vos coordonnées nous permettront de vous fournir une estimation gratuite précise et fiable.",
-      icon: (
-        <BuildingOffice2Icon
-          className="h-4 w-4 text-yellow-500 mr-3"
-          aria-hidden="true"
-        />
-      ),
-    },
-    {
-      title: "Estimation en temps réel",
-      text: "Toutes nos estimations son basées sur le marché en temps réel et sur les données fournis par l'état.",
+      title: "Éligibilité TVA réduite",
+      text: "Découvrez rapidement si vous êtes éligible à la TVA à taux réduit pour l'achat de votre résidence principale.",
       icon: (
         <ArrowTrendingUpIcon
           className="h-4 w-4 text-yellow-500 mr-3"
@@ -33,8 +23,18 @@ const Avantages = () => {
       ),
     },
     {
-      title: "Confidentialité garantie",
-      text: "Nous respectons votre confidentialité. Vos données restent privées, seul votre agent immobilier peut y accéder.",
+      title: "Prêt à taux zéro simplifié",
+      text: "Bénéficiez d'un accompagnement pour profiter du prêt à taux zéro, une aide précieuse pour financer votre projet immobilier.",
+      icon: (
+        <HandThumbUpIcon
+          className="h-4 w-4 text-yellow-500 mr-3"
+          aria-hidden="true"
+        />
+      ),
+    },
+    {
+      title: "Sécurité et confidentialité",
+      text: "Nous garantissions la sécurité de vos informations. Les détails de votre prêt et votre éligibilité sont traités avec la plus stricte confidentialité.",
       icon: (
         <CloudArrowUpIcon
           className="h-4 w-4 text-yellow-500 mr-3"
