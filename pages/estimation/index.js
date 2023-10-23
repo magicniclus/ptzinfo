@@ -7,12 +7,12 @@ import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
 const index = () => {
-  const secteur = useSelector((state) => state.clientInfomation.secteur);
+  const type = useSelector((state) => state.clientInfomation.type);
 
   const router = useRouter();
 
   useEffect(() => {
-    if (!secteur) router.push("/");
+    if (!type) router.push("/");
   }, []);
 
   return (
