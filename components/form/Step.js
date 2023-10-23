@@ -6,6 +6,7 @@ import SituationPersonnelle from "./step/SituationPersonnelle";
 import SituationProfessionnelle from "./step/SituationProfessionnelle";
 import RevenusFiscal from "./step/RevenusFiscal";
 import NbrPartFoyer from "./step/NbrPartFoyer";
+import Secteur from "./step/Secteur";
 import Projet from "./step/Projet";
 
 const Step = () => {
@@ -13,6 +14,7 @@ const Step = () => {
   const step = useSelector((state) => state?.stepInProgress);
 
   const type = useSelector((state) => state?.clientInfomation?.type);
+  const secteur = useSelector((state) => state?.clientInfomation?.secteur);
   const situationPersonnelle = useSelector(
     (state) => state?.clientInfomation?.situationPersonnelle
   );
@@ -39,7 +41,7 @@ const Step = () => {
   const handleComponent = () => {
     switch (step) {
       case 2:
-        return <AppartementMaison />;
+        return <Secteur />;
 
       case 3:
         return <SituationPersonnelle />;
@@ -68,7 +70,7 @@ const Step = () => {
   const isButtonDisabled = () => {
     switch (step) {
       case 2:
-        return !type;
+        return !secteur;
 
       case 3:
         return !situationPersonnelle;
