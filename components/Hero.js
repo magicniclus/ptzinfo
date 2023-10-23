@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckBadgeIcon } from "@heroicons/react/20/solid";
 import FirstStep from "./form/FirstStep";
+import AppartementMaison from "./form/step/AppartementMaison";
 
 const avantages = [
   {
@@ -63,7 +64,7 @@ const Hero = () => {
       </div>
 
       <div className="w-9/12 h-0.5 bg-gray-100 lg:hidden flex mb-7 mt-0" />
-      <FirstStep />
+      <AppartementMaison />
     </section>
   );
 };
