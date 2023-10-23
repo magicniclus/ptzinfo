@@ -99,7 +99,7 @@ const Step = () => {
   return (
     <form className="w-full min-h-[250px] h-full flex flex-col justify-between bg-opacity-50 rounded-md mt-10">
       {handleComponent()}
-      <div className="flex items-center lg:mb-0 mb-5">
+      <div className="flex items-center lg:my-0 my-5">
         <button
           disabled={isButtonDisabled()}
           type="button"
