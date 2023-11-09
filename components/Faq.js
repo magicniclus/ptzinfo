@@ -4,69 +4,70 @@ import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
 const faqs = [
   {
     id: 1,
-    question: "Pourquoi est-il important d'estimer son bien immobilier ?",
+    question: "Pourquoi est-il important de simuler son PTZ sur notre site ?",
     answer:
-      "L'estimation immobilière permet de déterminer la valeur réelle de votre bien sur le marché actuel. Cela vous aide à fixer un prix de vente ou de location adapté, évitant ainsi une sous-évaluation ou une surévaluation qui pourrait dissuader les potentiels acheteurs ou locataires.",
+      "La simulation de votre PTZ sur notre site vous permet de déterminer avec précision l'ampleur de l'aide que vous pouvez obtenir pour votre projet immobilier. Cela optimise votre plan de financement en prenant en compte les conditions actuelles et les critères spécifiques du PTZ.",
   },
   {
     id: 2,
-    question: "Comment avenue-immo assure-t-il une estimation précise ?",
+    question: "Comment notre site assure-t-il une simulation précise du PTZ ?",
     answer:
-      "Avenue-immo utilise des données récoltées en temps réel et des algorithmes avancés pour fournir une estimation aussi précise que possible. Nous analysons les transactions récentes, les tendances du marché et d'autres facteurs pertinents pour votre bien.",
+      "Notre site utilise des données actualisées sur les barèmes du PTZ, les plafonds de ressources, et les zones géographiques concernées. Nos algorithmes sont conçus pour intégrer tous les critères nécessaires afin de vous fournir une estimation précise de votre éligibilité et du montant du PTZ.",
   },
   {
     id: 3,
     question:
-      "Pourquoi compléter une estimation en ligne par une estimation physique ?",
+      "Quelle est la valeur ajoutée d'une simulation PTZ en ligne sur notre site ?",
     answer:
-      "L'estimation en ligne offre une première approximation basée sur des données générales. Une estimation physique permet d'appréhender les spécificités de votre bien, comme son état, ses aménagements ou sa localisation exacte, garantissant ainsi une évaluation plus précise et personnalisée.",
+      "Notre simulation en ligne vous donne un aperçu rapide et personnalisé de votre capacité d'emprunt avec le PTZ. Elle prend en compte les spécificités de votre projet et vous aide à comprendre comment le PTZ peut s'intégrer dans votre financement global.",
   },
   {
     id: 4,
-    question: "Comment les données sont-elles récoltées en temps réel ?",
+    question:
+      "Comment les informations sur le PTZ sont-elles tenues à jour sur notre site ?",
     answer:
-      "Nous utilisons des technologies avancées et des partenariats avec diverses bases de données immobilières pour obtenir des informations actualisées sur les transactions, les offres et les demandes dans différentes régions.",
+      "Nous maintenons des liens étroits avec les institutions financières et suivons les modifications législatives pour actualiser en continu nos simulateurs avec les dernières informations disponibles concernant le PTZ.",
   },
   {
     id: 5,
     question:
-      "Mes données personnelles sont-elles en sécurité avec avenue-immo ?",
+      "Les informations fournies pour la simulation du PTZ sont-elles sécurisées sur notre site ?",
     answer:
-      "Absolument. La protection de vos données est notre priorité. Nous utilisons des protocoles de sécurité avancés pour garantir la confidentialité et la sécurité de vos informations. Elles ne sont jamais partagées sans votre consentement explicite.",
+      "Totalement. Nous appliquons des mesures de sécurité rigoureuses pour assurer la confidentialité et la protection de vos données personnelles. Votre vie privée est respectée et vos informations ne sont utilisées que pour la simulation de votre PTZ.",
   },
   {
     id: 6,
     question:
-      "Combien de temps prend une estimation en ligne sur avenue-immo ?",
+      "Combien de temps faut-il pour réaliser une simulation de PTZ sur notre site ?",
     answer:
-      "L'estimation en ligne est conçue pour être rapide et efficace. En général, cela ne prend que quelques minutes pour obtenir une première approximation de la valeur de votre bien.",
+      "Notre simulateur de PTZ est conçu pour être rapide et intuitif. En quelques minutes, vous pouvez obtenir une estimation de votre éligibilité et du montant potentiel de votre PTZ.",
   },
   {
     id: 7,
     question:
-      "Quelle est la différence entre une estimation en ligne et une évaluation professionnelle ?",
+      "En quoi la simulation de PTZ sur notre site diffère-t-elle des autres outils disponibles ?",
     answer:
-      "L'estimation en ligne est basée sur des données générales et offre une première idée de la valeur. Une évaluation professionnelle, en revanche, est réalisée par un expert qui visite le bien, analyse ses caractéristiques uniques et fournit une évaluation plus détaillée et précise.",
+      "Notre simulateur de PTZ se distingue par sa précision, l'actualisation constante de ses données et son ergonomie. Nous visons à fournir une expérience utilisateur sans faille, tout en garantissant des résultats fiables et personnalisés.",
   },
   {
     id: 8,
-    question: "L'estimation en ligne est-elle gratuite ?",
+    question: "La simulation du PTZ est-elle gratuite sur notre site ?",
     answer:
-      "Oui, l'estimation en ligne sur avenue-immo est totalement gratuite. Elle vise à offrir aux propriétaires une première idée de la valeur de leur bien.",
+      "Oui, la simulation du PTZ sur notre site est entièrement gratuite. Elle est destinée à vous fournir toutes les informations nécessaires pour planifier votre financement immobilier avec le PTZ.",
   },
   {
     id: 9,
     question:
-      "Puis-je faire confiance à l'estimation fournie par avenue-immo ?",
+      "Puis-je me fier aux résultats de la simulation de PTZ proposée par notre site ?",
     answer:
-      "Oui, nos estimations sont basées sur des données fiables et des algorithmes avancés. Cependant, pour une évaluation la plus précise possible, nous recommandons toujours de compléter l'estimation en ligne par une évaluation professionnelle sur place.",
+      "Absolument. Nos simulations s'appuient sur les données les plus récentes et sont régulièrement vérifiées pour assurer leur fiabilité. Toutefois, nous recommandons de consulter un conseiller financier pour une analyse approfondie de votre situation.",
   },
   {
     id: 10,
     question:
-      "Comment avenue-immo se distingue-t-il des autres sites d'estimation ?",
+      "Quels avantages y a-t-il à utiliser notre site pour simuler un PTZ plutôt qu'un autre outil ?",
     answer:
-      "Avenue-immo se concentre sur la précision, l'actualité des données et la facilité d'utilisation. Notre plateforme est conçue pour offrir aux utilisateurs une expérience fluide tout en garantissant des estimations fiables basées sur des données récentes et pertinentes.",
+      "Notre site est spécialement conçu pour simplifier la simulation de votre PTZ. Nous offrons une interface utilisateur claire, des conseils personnalisés et des informations à jour, ce qui vous permet de prendre les meilleures décisions pour votre financement immobilier.",
   },
 ];
 
