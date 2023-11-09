@@ -4,13 +4,17 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6"
+        className="mx-auto flex max-w-7xl items-center justify-between px-6"
         aria-label="Global"
       >
         <div className="flex lg:flex-1 ">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1.5">
             <span className="sr-only">Avenue-immo</span>
-            <img className="h-auto w-10" src="/logo.png" alt="avenue-immo" />
+            <img
+              className="w-auto h-20"
+              src="/LOGO-PTZ.png"
+              alt="avenue-immo"
+            />
           </a>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
