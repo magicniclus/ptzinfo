@@ -38,9 +38,9 @@ const AppartementMaison = () => {
         Quel type de bien souhaitez-vous acquerir ?
       </h2>
       <form className="flex flex-col items-start mt-10" onSubmit={handleSubmit}>
-        <div className="flex">
+        <div className="flex flex-wrap">
           {["Maison", "Appartement"].map((type, idx) => (
-            <div className={idx === 1 && ""}>
+            <div className={idx === 1 && "mt-5"}>
               <CardsWithBigImg
                 key={type}
                 type={type}
