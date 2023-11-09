@@ -7,7 +7,7 @@ const index = () => {
       <img
         src="/image-page-finale.jpg"
         alt="devenez"
-        className="mt-5 rounded-lg"
+        className="mt-5 rounded-lg w-full"
       />
       <div className="p-8 text-gray-700">
         <h2 className="text-2xl font-bold mb-4">
@@ -17,10 +17,10 @@ const index = () => {
         <div className="bg-yellow-500 w-20 h-2 rounded-full my-5"></div>
         <p className="mb-4">
           Bienvenue dans l'univers de l'accession à la propriété facilitée !
-          Chez [Nom du Promoteur Immobilier], nous sommes déterminés à rendre
-          votre rêve de devenir propriétaire une réalité. Découvrez comment le
-          Prêt à Taux Zéro (PTZ) et la TVA réduite en Zone ANRU peuvent vous
-          ouvrir les portes de votre futur logement neuf.
+          Chez Signature promotion, nous sommes déterminés à rendre votre rêve
+          de devenir propriétaire une réalité. Découvrez comment le Prêt à Taux
+          Zéro (PTZ) et la TVA réduite en Zone ANRU peuvent vous ouvrir les
+          portes de votre futur logement neuf.
         </p>
 
         <h2 className="text-xl font-bold mb-4 mt-10">
@@ -75,76 +75,77 @@ const index = () => {
           Tableau - PTZ : montant maximum selon le nombre de personnes logées et
           la zone de la commune
         </p>
-
-        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
-          <thead class="bg-blue-500 text-white">
-            <tr>
-              <th class="p-2 w-1/4">Nombre de personnes logées</th>
-              <th class="p-2">Zone A</th>
-              <th class="p-2">Zone B1</th>
-              <th class="p-2">Zone B2</th>
-              <th class="p-2">Zone C</th>
-            </tr>
-          </thead>
-          <tbody class="text-gray-700 text-center">
-            <tr>
-              <td class="p-2">1</td>
-              <td class="p-2">37 000 €</td>
-              <td class="p-2">30 000 €</td>
-              <td class="p-2">27 000 €</td>
-              <td class="p-2">24 000 €</td>
-            </tr>
-            <tr class="bg-gray-100 text-center">
-              <td class="p-2">2</td>
-              <td class="p-2">51 800 €</td>
-              <td class="p-2">42 000 €</td>
-              <td class="p-2">37 800 €</td>
-              <td class="p-2">33 600 €</td>
-            </tr>
-            <tr>
-              <td class="p-2">3</td>
-              <td class="p-2">62 900 €</td>
-              <td class="p-2">51 000 €</td>
-              <td class="p-2">45 900 €</td>
-              <td class="p-2">40 800 €</td>
-            </tr>
-            <tr class="bg-gray-100 text-center">
-              <td class="p-2">4</td>
-              <td class="p-2">74 000 €</td>
-              <td class="p-2">60 000 €</td>
-              <td class="p-2">54 000 €</td>
-              <td class="p-2">48 000 €</td>
-            </tr>
-            <tr>
-              <td class="p-2">5</td>
-              <td class="p-2">85 100 €</td>
-              <td class="p-2">69 000 €</td>
-              <td class="p-2">62 100 €</td>
-              <td class="p-2">55 200 €</td>
-            </tr>
-            <tr class="bg-gray-100 text-center">
-              <td class="p-2">6</td>
-              <td class="p-2">96 200 €</td>
-              <td class="p-2">78 000 €</td>
-              <td class="p-2">70 200 €</td>
-              <td class="p-2">62 400 €</td>
-            </tr>
-            <tr>
-              <td class="p-2">7</td>
-              <td class="p-2">107 300 €</td>
-              <td class="p-2">87 000 €</td>
-              <td class="p-2">78 300 €</td>
-              <td class="p-2">69 600 €</td>
-            </tr>
-            <tr class="bg-gray-100 text-center">
-              <td class="p-2">À partir de 8</td>
-              <td class="p-2">118 400 €</td>
-              <td class="p-2">96 000 €</td>
-              <td class="p-2">86 400 €</td>
-              <td class="p-2">76 800 €</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white shadow-md rounded-lg">
+            <thead class="bg-blue-500 text-white">
+              <tr>
+                <th class="p-2 w-1/4">Nombre de personnes logées</th>
+                <th class="p-2">Zone A</th>
+                <th class="p-2">Zone B1</th>
+                <th class="p-2">Zone B2</th>
+                <th class="p-2">Zone C</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-700 text-center">
+              <tr>
+                <td class="p-2">1</td>
+                <td class="p-2">37 000 €</td>
+                <td class="p-2">30 000 €</td>
+                <td class="p-2">27 000 €</td>
+                <td class="p-2">24 000 €</td>
+              </tr>
+              <tr class="bg-gray-100 text-center">
+                <td class="p-2">2</td>
+                <td class="p-2">51 800 €</td>
+                <td class="p-2">42 000 €</td>
+                <td class="p-2">37 800 €</td>
+                <td class="p-2">33 600 €</td>
+              </tr>
+              <tr>
+                <td class="p-2">3</td>
+                <td class="p-2">62 900 €</td>
+                <td class="p-2">51 000 €</td>
+                <td class="p-2">45 900 €</td>
+                <td class="p-2">40 800 €</td>
+              </tr>
+              <tr class="bg-gray-100 text-center">
+                <td class="p-2">4</td>
+                <td class="p-2">74 000 €</td>
+                <td class="p-2">60 000 €</td>
+                <td class="p-2">54 000 €</td>
+                <td class="p-2">48 000 €</td>
+              </tr>
+              <tr>
+                <td class="p-2">5</td>
+                <td class="p-2">85 100 €</td>
+                <td class="p-2">69 000 €</td>
+                <td class="p-2">62 100 €</td>
+                <td class="p-2">55 200 €</td>
+              </tr>
+              <tr class="bg-gray-100 text-center">
+                <td class="p-2">6</td>
+                <td class="p-2">96 200 €</td>
+                <td class="p-2">78 000 €</td>
+                <td class="p-2">70 200 €</td>
+                <td class="p-2">62 400 €</td>
+              </tr>
+              <tr>
+                <td class="p-2">7</td>
+                <td class="p-2">107 300 €</td>
+                <td class="p-2">87 000 €</td>
+                <td class="p-2">78 300 €</td>
+                <td class="p-2">69 600 €</td>
+              </tr>
+              <tr class="bg-gray-100 text-center">
+                <td class="p-2">À partir de 8</td>
+                <td class="p-2">118 400 €</td>
+                <td class="p-2">96 000 €</td>
+                <td class="p-2">86 400 €</td>
+                <td class="p-2">76 800 €</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h3 className="text-lg font-bold mb-4 underline">
           Localisation du bien : révision du zonage en octobre 2023
@@ -204,64 +205,66 @@ const index = () => {
         <p className="mb-4">
           Plafonds de ressources applicables pour l'année 2023
         </p>
-        <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
-          <thead>
-            <tr className="bg-blue-500 text-white">
-              <th class="border px-4 py-2">Catégorie de ménages</th>
-              <th class="border px-4 py-2">
-                Paris et communes limitrophes (en euros)
-              </th>
-              <th class="border px-4 py-2">
-                Île-de-France, hors Paris et communes limitrophes (en euros)
-              </th>
-              <th class="border px-4 py-2">Autres régions (en euros)</th>
-            </tr>
-          </thead>
-          <tbody className="text-gray-700">
-            <tr className="bg-gray-100 text-center">
-              <td class="p-2">1 personne</td>
-              <td class="p-2">36 314</td>
-              <td class="p-2">36 314</td>
-              <td class="p-2">31 570</td>
-            </tr>
-            <tr className="text-gray-700 text-center">
-              <td class="p-2">2 personnes</td>
-              <td class="p-2">54 272</td>
-              <td class="p-2">54 272</td>
-              <td class="p-2">42 160</td>
-            </tr>
-            <tr className="bg-gray-100 text-center">
-              <td class="p-2">3 personnes</td>
-              <td class="p-2">71 144</td>
-              <td class="p-2">65 238</td>
-              <td class="p-2">50 700</td>
-            </tr>
-            <tr className="text-gray-700 text-center">
-              <td class="p-2">4 personnes</td>
-              <td class="p-2">84 943</td>
-              <td class="p-2">78 144</td>
-              <td class="p-2">61 208</td>
-            </tr>
-            <tr className="bg-gray-100 text-center">
-              <td class="p-2">5 personnes</td>
-              <td class="p-2">101 062</td>
-              <td class="p-2">92 507</td>
-              <td class="p-2">72 002</td>
-            </tr>
-            <tr className="text-gray-700 text-center">
-              <td class="p-2">6 personnes</td>
-              <td class="p-2">113 722</td>
-              <td class="p-2">104 101</td>
-              <td class="p-2">81 149</td>
-            </tr>
-            <tr className="bg-gray-100 text-center">
-              <td class="p-2">Par personne supplémentaire au-delà de 6</td>
-              <td class="p-2">12 673</td>
-              <td class="p-2">11 598</td>
-              <td class="p-2">9 052</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white shadow-md rounded-lg">
+            <thead>
+              <tr className="bg-blue-500 text-white">
+                <th class="border px-4 py-2">Catégorie de ménages</th>
+                <th class="border px-4 py-2">
+                  Paris et communes limitrophes (en euros)
+                </th>
+                <th class="border px-4 py-2">
+                  Île-de-France, hors Paris et communes limitrophes (en euros)
+                </th>
+                <th class="border px-4 py-2">Autres régions (en euros)</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="bg-gray-100 text-center">
+                <td class="p-2">1 personne</td>
+                <td class="p-2">36 314</td>
+                <td class="p-2">36 314</td>
+                <td class="p-2">31 570</td>
+              </tr>
+              <tr className="text-gray-700 text-center">
+                <td class="p-2">2 personnes</td>
+                <td class="p-2">54 272</td>
+                <td class="p-2">54 272</td>
+                <td class="p-2">42 160</td>
+              </tr>
+              <tr className="bg-gray-100 text-center">
+                <td class="p-2">3 personnes</td>
+                <td class="p-2">71 144</td>
+                <td class="p-2">65 238</td>
+                <td class="p-2">50 700</td>
+              </tr>
+              <tr className="text-gray-700 text-center">
+                <td class="p-2">4 personnes</td>
+                <td class="p-2">84 943</td>
+                <td class="p-2">78 144</td>
+                <td class="p-2">61 208</td>
+              </tr>
+              <tr className="bg-gray-100 text-center">
+                <td class="p-2">5 personnes</td>
+                <td class="p-2">101 062</td>
+                <td class="p-2">92 507</td>
+                <td class="p-2">72 002</td>
+              </tr>
+              <tr className="text-gray-700 text-center">
+                <td class="p-2">6 personnes</td>
+                <td class="p-2">113 722</td>
+                <td class="p-2">104 101</td>
+                <td class="p-2">81 149</td>
+              </tr>
+              <tr className="bg-gray-100 text-center">
+                <td class="p-2">Par personne supplémentaire au-delà de 6</td>
+                <td class="p-2">12 673</td>
+                <td class="p-2">11 598</td>
+                <td class="p-2">9 052</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </Basic>
   );
