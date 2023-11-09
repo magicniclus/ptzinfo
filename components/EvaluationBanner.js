@@ -10,7 +10,7 @@ const EvaluationBanner = () => {
       <div className=" lg:w-7/12">
         <h1 className="text-2xl md:text-4xl text-gray-700 md:w-10/12">
           <span className="text-blue-500">Prêt à Taux Zéro (PTZ)</span> :
-          Conditions d'éligibilité et Plafonds ?{" "}
+          conditions d'éligibilité et plafonds ?{" "}
         </h1>
         <p className="text-gray-500 text-xs md:text-base font-light w-6/6 mt-5">
           Le Prêt à Taux Zéro (PTZ) offre une opportunité unique aux
@@ -20,16 +20,16 @@ const EvaluationBanner = () => {
         </p>
         <ul className="w-7/12 text-gray-500 text-xs md:text-base font-light">
           <li className="mt-3 list-disc">
-            Primo-accédant : Vous devez être acquéreur pour la première fois
+            Primo-accédant : vous devez être acquéreur pour la première fois
             d'une résidence principale.
           </li>
           <li className="mt-3 list-disc">
-            Utilisation comme résidence principale : Le bien financé par le PTZ
+            Utilisation comme résidence principale : le bien financé par le PTZ
             doit être votre résidence principale.
           </li>
           <li className="mt-3 list-disc">
-            Composition du foyer : Le nombre de personnes dans votre foyer
-            influence le montant du PTZ.
+            Composition du foyer et revenus : le nombre de personnes dans votre
+            foyer et le montant de vos revenus influence le montant du PTZ.
           </li>
         </ul>
       </div>
