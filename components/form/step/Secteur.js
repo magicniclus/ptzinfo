@@ -23,7 +23,7 @@ const Secteur = () => {
         principale ?
       </h2>
       <div className="flex flex-col">
-        {["Gironde", "Charante-Maritime"].map((type, idx) => (
+        {["Gironde", "Charente-Maritime"].map((type, idx) => (
           <div className={idx === 1 && "mt-3"}>
             <CardWithImg
               key={type}
