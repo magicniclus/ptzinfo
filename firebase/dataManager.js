@@ -3,14 +3,26 @@ import { database } from "./firebase.config";
 import { v4 as uuidv4 } from "uuid";
 
 export function writeUserData(nom, prenom, email, telephone) {
-  const dateEtHeure = new Date().toISOString();
+  // Créer un nouvel objet Date
+  const dateEtHeure = new Date();
+
+  // Convertir en string avec le format local français
+  const dateEtHeureFrancais = dateEtHeure.toLocaleString("fr-FR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false,
+  });
   return new Promise((resolve, reject) => {
     set(ref(database, `contact/${uuidv4()}`), {
       nom,
       prenom,
       email,
       telephone,
-      dateEtHeure,
+      dateEtHeureFrancais,
     })
       .then(() => {
         resolve("success");
