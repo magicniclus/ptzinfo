@@ -10,12 +10,12 @@ const EtapeEstimation = () => {
   useEffect(() => {
     setEtape([
       {
-        name: "Secteur",
+        name: "Type de bien",
         done: stepInProgress > 1 ? true : false,
         select: stepInProgress === 1 ? true : false,
       },
       {
-        name: "Type de bien",
+        name: "Secteur",
         done: stepInProgress > 2 ? true : false,
         select: stepInProgress === 2 ? true : false,
       },
