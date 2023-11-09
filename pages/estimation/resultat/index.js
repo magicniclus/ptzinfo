@@ -4,14 +4,17 @@ import Basic from "../../../layout/Basic";
 const index = () => {
   return (
     <Basic height="min-h-[calc(100vh-78px)]">
+      <img
+        src="/image-page-finale.jpg"
+        alt="devenez"
+        className="mt-5 rounded-lg"
+      />
       <div className="p-8 text-gray-700">
-        <h1 className="text-4xl font-bold my-20 text-center text-blue-500">
-          NOUVEAU ZONAGE
-        </h1>
         <h2 className="text-2xl font-bold mb-4">
           ACCESSION A LA PROPRIETE : PTZ ET TVA REDUITE, LA COMBINAISON GAGNANTE
           POUR DEVENIR PROPRIETAIRE.
         </h2>
+        <div className="bg-yellow-500 w-20 h-2 rounded-full my-5"></div>
         <p className="mb-4">
           Bienvenue dans l'univers de l'accession à la propriété facilitée !
           Chez [Nom du Promoteur Immobilier], nous sommes déterminés à rendre
@@ -74,7 +77,7 @@ const index = () => {
         </p>
 
         <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
-          <thead class="bg-gray-800 text-white">
+          <thead class="bg-blue-500 text-white">
             <tr>
               <th class="p-2 w-1/4">Nombre de personnes logées</th>
               <th class="p-2">Zone A</th>
@@ -203,7 +206,7 @@ const index = () => {
         </p>
         <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden mb-4">
           <thead>
-            <tr className="bg-gray-800 text-white">
+            <tr className="bg-blue-500 text-white">
               <th class="border px-4 py-2">Catégorie de ménages</th>
               <th class="border px-4 py-2">
                 Paris et communes limitrophes (en euros)
