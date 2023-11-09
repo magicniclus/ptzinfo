@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <section
       id="estimation"
-      className="flex w-full justify-between items-center bg-gray-50 rounded-md mt-0 lg:mt-10 lg:mb-10 px-6 lg:px-10 lg:flex-row flex-col"
+      className="flex w-full justify-between items-center bg-gray-50 rounded-md mt-10 lg:mb-10 px-6 lg:px-10 lg:flex-row flex-col"
     >
       <div className="w-full lg:w-5/12 flex flex-col justify-center lg:min-h-[500px] lg:mb-0 mb-10 relative ">
         <div>
