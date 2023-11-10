@@ -40,7 +40,7 @@ const AppartementMaison = () => {
       <form className="flex flex-col items-start mt-10" onSubmit={handleSubmit}>
         <div className="flex flex-wrap">
           {["Maison", "Appartement"].map((type, idx) => (
-            <div className={idx === 1 && "mt-5"}>
+            <div className={"mt-5"}>
               <CardsWithBigImg
                 key={type}
                 type={type}
