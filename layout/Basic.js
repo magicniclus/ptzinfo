@@ -9,7 +9,7 @@ export default function Basic(props) {
       <Head>
         <title>{props.title}</title>
         <meta name="description" content={props.metaDescription} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/LOGO-PTZ.png" />
       </Head>
       <Header />
       <main
