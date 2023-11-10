@@ -4,16 +4,18 @@ import Basic from "../../../layout/Basic";
 const index = () => {
   return (
     <Basic height="min-h-[calc(100vh-78px)]">
-      <img
-        src="/image-page-finale.jpg"
-        alt="devenez"
-        className="mt-5 rounded-lg w-full"
-      />
       <div className="p-8 text-gray-700">
-        <h2 className="text-2xl font-bold mb-4">
-          ACCESSION A LA PROPRIETE : PTZ ET TVA REDUITE, LA COMBINAISON GAGNANTE
-          POUR DEVENIR PROPRIETAIRE.
-        </h2>
+        <h1 className="text-2xl font-bold mb-4">
+          <span className="lg:text-5xl text-2xl lg:w-11/12 mt-10 lg:mt-3 text-gray-700">
+            ACCESSION A LA PROPRIETE : <br />
+          </span>
+          <span className="lg:text-6xl text-4xl inline bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500 bg-clip-text font-display font-bold tracking-tight text-transparent min-h-max">
+            PTZ ET TVA REDUITE,
+          </span>{" "}
+          <span className="lg:text-5xl text-2xl lg:w-11/12 mt-10 lg:mt-3 text-gray-700">
+            LA COMBINAISON GAGNANTE POUR DEVENIR PROPRIETAIRE.
+          </span>
+        </h1>
         <div className="bg-yellow-500 w-20 h-2 rounded-full my-5"></div>
         <p className="mb-4">
           Bienvenue dans l'univers de l'accession à la propriété facilitée !
@@ -32,9 +34,9 @@ const index = () => {
           comprenez les conditions d'éligibilité et les plafonds de ressources
           qui s'appliquent :
         </p>
-        <h3 className="text-lg font-bold mb-4 underline">
+        <h2 className="text-lg font-bold mb-4 underline">
           Conditions d'éligibilité au PTZ
-        </h3>
+        </h2>
         <p className="mb-4">
           Pour bénéficier du PTZ, l'acquéreur doit répondre à certaines
           conditions :
@@ -57,9 +59,9 @@ const index = () => {
           grâce à notre outil.
         </p>
 
-        <h3 className="text-lg font-bold mb-4 underline">
+        <h2 className="text-lg font-bold mb-4 underline">
           Plafonds de ressources liés au PTZ
-        </h3>
+        </h2>
 
         <p className="mb-4">
           Les plafonds de ressources déterminent si vous êtes éligible au PTZ.
@@ -147,9 +149,9 @@ const index = () => {
           </table>
         </div>
 
-        <h3 className="text-lg font-bold mb-4 underline">
+        <h2 className="text-lg font-bold mb-4 underline">
           Localisation du bien : révision du zonage en octobre 2023
-        </h3>
+        </h2>
         <p className="mb-4">
           La zone dans laquelle se trouve la ville du bien, associé au nombre de
           personnes logées dans le foyer, détermine à la fois :
@@ -165,7 +167,11 @@ const index = () => {
           ligne. Cet outil vous permettra d'estimer rapidement votre éligibilité
           et le montant du PTZ auquel vous pouvez prétendre.
         </p>
-
+        <img
+          src="/image-page-finale.jpg"
+          alt="devenez"
+          className="mt-5 rounded-lg w-full"
+        />
         <h2 className="text-xl font-bold mb-4 mt-10">
           Prix en TVA réduite : les critères d’éligibilité et les plafonds de
           ressources requis
@@ -175,9 +181,9 @@ const index = () => {
           abords de ce type de zone, la TVA réduite est une option à considérer.
           Voici ce que vous devez savoir :
         </p>
-        <h3 className="text-lg font-bold mb-4 underline">
+        <h2 className="text-lg font-bold mb-4 underline">
           Conditions pour l'achat en TVA réduite en Zone ANRU
-        </h3>
+        </h2>
         <ul className="mb-4 text-gray-500">
           <li className="mb-2">
             1. Localisation du bien : L'achat en TVA réduite concerne les zones
@@ -193,9 +199,9 @@ const index = () => {
             le bien en tant que résidence principale.
           </li>
         </ul>
-        <h3 className="text-lg font-bold mb-4 underline">
+        <h2 className="text-lg font-bold mb-4 underline">
           Plafonds de ressources pour l'achat en TVA réduite
-        </h3>
+        </h2>
         <p className="mb-4">
           Les plafonds de ressources varient en fonction de la zone (Paris, Île
           de France et autres régions) et du nombre de personnes dans le foyer.
