@@ -3,11 +3,7 @@ import { useDispatch } from "react-redux";
 import Select from "../selected/Select";
 
 const Projet = () => {
-  const options = [
-    "Je recherche un bien",
-    "J'ai deja acquis un bien",
-    "Je ne sais pas",
-  ];
+  const options = ["Je recherche un bien", "J'ai déjà acquis un bien", "Autre"];
 
   const dispatch = useDispatch();
   const [selectedType, setSelectedType] = useState(null);
@@ -25,7 +21,7 @@ const Projet = () => {
         className="text-2xl font-light lg:my-0 my-5"
         style={{ color: "#3b82f6" }}
       >
-        Ou en êtes vous dans votre projet ?
+        Où en êtes vous dans votre projet ?
       </h2>
       <div className="flex flex-col">
         <Select options={options} onChange={setSelectedType} />
