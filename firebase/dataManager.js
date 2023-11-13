@@ -2,7 +2,19 @@ import { getDatabase, ref, set } from "firebase/database";
 import { database } from "./firebase.config";
 import { v4 as uuidv4 } from "uuid";
 
-export function writeUserData(nom, prenom, email, telephone) {
+export function writeUserData(
+  nom,
+  prenom,
+  email,
+  telephone,
+  projet,
+  situationPro,
+  situationPerso,
+  revenus,
+  nbrDePart,
+  type,
+  secteur
+) {
   // Créer un nouvel objet Date
   const dateEtHeure = new Date();
 
@@ -22,6 +34,13 @@ export function writeUserData(nom, prenom, email, telephone) {
       prenom,
       email,
       telephone,
+      projet,
+      situationPro,
+      situationPerso,
+      revenus,
+      nbrDePart,
+      type,
+      secteur,
       dateEtHeureFrancais,
     })
       .then(() => {
