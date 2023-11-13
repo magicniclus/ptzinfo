@@ -3,7 +3,11 @@ import Basic from "../../../layout/Basic";
 
 const index = () => {
   return (
-    <Basic height="min-h-[calc(100vh-78px)]">
+    <Basic
+      height="min-h-[calc(100vh-78px)]"
+      title="Résultats de Simulation de Prêt à Taux Zéro - Info PTZ | Vos Estimations en Un Clic"
+      metaDescription="Découvrez les résultats de votre simulation de prêt à taux zéro avec Info PTZ. Obtenez des estimations claires et précises pour planifier votre projet immobilier en toute confiance. Consultez vos résultats maintenant et avancez vers votre objectif."
+    >
       <div className="p-8 text-gray-700">
         <h1 className="text-2xl font-bold mb-4">
           <span className="lg:text-5xl text-2xl lg:w-11/12 mt-10 lg:mt-3 text-gray-700">
