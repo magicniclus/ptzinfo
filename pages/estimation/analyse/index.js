@@ -48,7 +48,11 @@ const index = () => {
 
   return (
     <>
-      <Basic height="min-h-[calc(100vh-78px)]">
+      <Basic
+        height="min-h-[calc(100vh-78px)]"
+        title="Analyse de Simulation de Prêt à Taux Zéro - Info PTZ | Comprendre Votre Estimation"
+        metaDescription="Plongez dans l'analyse détaillée de votre simulation de prêt à taux zéro avec Info PTZ. Nous décomposons chaque aspect pour vous aider à comprendre et optimiser votre plan de financement. Explorez l'analyse dès maintenant et prenez des décisions éclairées."
+      >
         <ContainerEstimation>
           {isLoading && (
             <div className="fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-10">
