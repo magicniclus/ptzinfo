@@ -103,18 +103,18 @@ const FormulaireFinal = () => {
       )
         .then((res) => {
           //TODO
-          // writeCRMUserData(
-          //   firstName,
-          //   lastName,
-          //   email,
-          //   phone,
-          //   secteur,
-          //   type,
-          //   situationPersonnelle,
-          //   situationProfessionnelle,
-          //   revenusFiscal,
-          //   nbrDePart
-          // );
+          writeCRMUserData(
+            firstName,
+            lastName,
+            email,
+            phone,
+            secteur,
+            type,
+            situationPersonnelle,
+            situationProfessionnelle,
+            revenusFiscal,
+            nbrDePart
+          );
           router.push(`/estimation/resultat`);
         })
         .catch((error) => {
