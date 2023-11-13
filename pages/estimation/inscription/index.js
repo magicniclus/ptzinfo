@@ -31,7 +31,11 @@ const index = () => {
 
   return (
     <>
-      <Basic height="min-h-[calc(100vh-78px)]">
+      <Basic
+        height="min-h-[calc(100vh-78px)]"
+        title="nscription pour Simulation de Prêt à Taux Zéro - Info PTZ | Rejoignez-Nous"
+        metaDescription="Inscrivez-vous sur Info PTZ pour accéder à des simulations de prêt à taux zéro personnalisées. Profitez d'une expérience utilisateur simplifiée et sécurisée pour gérer vos simulations et obtenir des résultats précis. Inscrivez-vous aujourd'hui pour commencer !"
+      >
         <ContainerEstimation>
           {!isLoading && (
             <div className="fixed top-0 left-0 w-full h-full bg-white flex items-center justify-center z-10">
