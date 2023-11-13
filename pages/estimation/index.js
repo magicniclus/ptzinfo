@@ -16,7 +16,11 @@ const index = () => {
   }, []);
 
   return (
-    <Basic height="min-h-[calc(100vh-78px)]">
+    <Basic
+      height="min-h-[calc(100vh-78px)]"
+      title="Simulateur Prêt à Taux Zéro - Info PTZ | Étape par Étape vers Votre Estimation"
+      metaDescription="Utilisez notre simulateur interactif pour estimer facilement votre prêt à taux zéro. Chez Info PTZ, nous vous guidons à travers chaque étape pour une estimation précise et personnalisée. Commencez votre simulation maintenant et planifiez votre avenir financier avec confiance."
+    >
       <ContainerEstimation>
         <div className=" flex flex-col justify-between  w-full lg:w-4/12">
           <EtapeEstimation />
