@@ -85,6 +85,15 @@ export function writeCRMUserData(
       cible: "RP",
       date: dateEtHeure,
       id_programme: 26,
+      message:
+        "Situation professionnelle : " +
+        situationProfessionnelle +
+        ", Situation personnelle : " +
+        situationPersonnelle +
+        ", Revenus fiscaux : " +
+        revenusFiscal +
+        ", Nombre de part : " +
+        nbrDePart,
     },
   };
 
