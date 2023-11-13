@@ -84,7 +84,7 @@ export function writeCRMUserData(
       ],
       cible: "RP",
       date: dateEtHeure,
-      id_programme: 26,
+      // id_programme: 26,
       message:
         "Situation professionnelle : " +
         situationProfessionnelle +
