@@ -32,6 +32,7 @@ const FormulaireFinal = () => {
     (state) => state.clientInfomation.revenusFiscal
   );
   const nbrDePart = useSelector((state) => state.clientInfomation.nbrDePart);
+  const projet = useSelector((state) => state.clientInfomation.projet);
 
   const validateFields = () => {
     let isValid = true;
@@ -87,7 +88,19 @@ const FormulaireFinal = () => {
           phone,
         },
       });
-      writeUserData(firstName, lastName, email, phone)
+      writeUserData(
+        firstName,
+        lastName,
+        email,
+        phone,
+        projet,
+        situationProfessionnelle,
+        situationPersonnelle,
+        revenusFiscal,
+        nbrDePart,
+        type,
+        secteur
+      )
         .then((res) => {
           //TODO
           // writeCRMUserData(
