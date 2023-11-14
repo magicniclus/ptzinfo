@@ -10,6 +10,15 @@ export default function Basic(props) {
         <title>{props.title}</title>
         <meta name="description" content={props.metaDescription} />
         <link rel="icon" href="/LOGO-PTZ.png" />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11272063965"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'AW-11272063965');
+        </script>
       </Head>
       <Header />
       <main
