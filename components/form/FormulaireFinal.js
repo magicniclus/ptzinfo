@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import { useDispatch, useSelector } from "react-redux";
 
-import { writeUserData } from "../../firebase/dataManager";
+import { writeUserData, writeCRMUserData } from "../../firebase/dataManager";
 
 const FormulaireFinal = () => {
   const namePattern = /^[a-zA-Z]{2,}$/;
