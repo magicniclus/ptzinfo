@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { writeUserData, writeCRMUserData } from "../../firebase/dataManager";
 
 const FormulaireFinal = () => {
-  const namePattern = /^[a-zA-Z]{2,}$/;
+  const namePattern = /^(?=.*[a-zA-Z])[a-zA-Z ]{2,}$/;
 
   const [disabled, setIsDisabled] = useState(false);
 
