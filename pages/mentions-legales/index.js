@@ -46,7 +46,9 @@ const index = () => {
         </p>
 
         <h3 className="text-lg mt-3 font-semibold">Hébergeur du site</h3>
-        <p className="mt-2">À renseigner</p>
+        <p className="mt-2">
+          Netlify: 2325 3RD STREET,SUITE 215, SAN FRANCISCO, CA 94107 (USA)
+        </p>
 
         <h3 className="text-lg mt-3 font-semibold">Propriété Intellectuelle</h3>
         <p className="mt-2">
