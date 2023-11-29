@@ -8,13 +8,13 @@ export function writeUserData(
   prenom,
   email,
   telephone,
-  projet,
-  situationPro,
+  secteur,
+  type,
   situationPerso,
+  situationPro,
   revenus,
   nbrDePart,
-  type,
-  secteur
+  projet
 ) {
   // Créer un nouvel objet Date
   const dateEtHeure = new Date();
