@@ -108,6 +108,7 @@ const FormulaireFinal = () => {
             lastName,
             email,
             phone,
+            "M",
             secteur,
             type,
             situationPersonnelle,
