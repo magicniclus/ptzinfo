@@ -9,41 +9,41 @@ const EtapeEstimation = () => {
   const [etape, setEtape] = useState();
   useEffect(() => {
     setEtape([
+      // {
+      //   name: "Type de bien",
+      //   done: stepInProgress > 1 ? true : false,
+      //   select: stepInProgress === 1 ? true : false,
+      // },
       {
         name: "Type de bien",
         done: stepInProgress > 1 ? true : false,
         select: stepInProgress === 1 ? true : false,
       },
       {
-        name: "Secteur",
+        name: "Situation personnelle",
         done: stepInProgress > 2 ? true : false,
         select: stepInProgress === 2 ? true : false,
       },
       {
-        name: "Situation personnelle",
+        name: "Situation professionnelle",
         done: stepInProgress > 3 ? true : false,
         select: stepInProgress === 3 ? true : false,
       },
       {
-        name: "Situation professionnelle",
+        name: "Revenus fiscale de référence",
         done: stepInProgress > 4 ? true : false,
         select: stepInProgress === 4 ? true : false,
       },
       {
-        name: "Revenus fiscale de référence",
+        name: "Foyer fiscal",
         done: stepInProgress > 5 ? true : false,
         select: stepInProgress === 5 ? true : false,
-      },
-      {
-        name: "Foyer fiscal",
-        done: stepInProgress > 6 ? true : false,
-        select: stepInProgress === 6 ? true : false,
       },
 
       {
         name: "Objectif",
-        done: stepInProgress > 7 ? true : false,
-        select: stepInProgress === 14 ? true : false,
+        done: stepInProgress > 6 ? true : false,
+        select: stepInProgress === 13 ? true : false,
       },
     ]);
   }, [clientInformation, stepInProgress]);
