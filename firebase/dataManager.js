@@ -8,7 +8,8 @@ export function writeUserData(
   prenom,
   email,
   telephone,
-  secteur,
+  codePostal, // Ajout du code postal comme paramètre
+  // secteur,
   type,
   situationPerso,
   situationPro,
@@ -35,13 +36,14 @@ export function writeUserData(
       prenom,
       email,
       telephone,
+      codePostal,
       projet,
       situationPro,
       situationPerso,
       revenus,
       nbrDePart,
       type,
-      secteur,
+      // secteur,
       dateEtHeureFrancais,
     })
       .then(() => {
@@ -59,7 +61,8 @@ export function writeCRMUserData(
   email,
   telephone,
   civilite,
-  secteur,
+  codePostal, // Ajout du code postal comme paramètre
+  // secteur,
   type,
   situationPersonnelle,
   situationProfessionnelle,
@@ -75,7 +78,7 @@ export function writeCRMUserData(
     email: email,
     telephone_mobile: telephone,
     civilite: civilite,
-    code_postal: secteur === "gironde" ? "33000" : "17000",
+    code_postal: codePostal,
     id_provenance: 22,
     demande: {
       genres_lot: [
@@ -95,6 +98,7 @@ export function writeCRMUserData(
         revenusFiscal +
         ", Nombre de part : " +
         nbrDePart,
+      //Todo: Ajouter zone de recherche (33 ou 17)
     },
   };
 
