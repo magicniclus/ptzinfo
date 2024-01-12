@@ -40,22 +40,22 @@ const Step = () => {
 
   const handleComponent = () => {
     switch (step) {
-      case 2:
-        return <Secteur />;
+      // case 2:
+      //   return <Secteur />;
 
-      case 3:
+      case 2:
         return <SituationPersonnelle />;
 
-      case 4:
+      case 3:
         return <SituationProfessionnelle />;
 
-      case 5:
+      case 4:
         return <RevenusFiscal />;
 
-      case 6:
+      case 5:
         return <NbrPartFoyer />;
 
-      case 7:
+      case 6:
         return <Projet />;
 
       default:
@@ -69,22 +69,22 @@ const Step = () => {
 
   const isButtonDisabled = () => {
     switch (step) {
-      case 2:
-        return !secteur;
+      // case 2:
+      //   return !secteur;
 
-      case 3:
+      case 2:
         return !situationPersonnelle;
 
-      case 4:
+      case 3:
         return !situationProfessionnelle;
 
-      case 5:
+      case 4:
         return !revenusFiscal;
 
-      case 6:
+      case 5:
         return !nbrDePart;
 
-      case 7:
+      case 6:
         return !projet;
 
       default:
@@ -108,9 +108,9 @@ const Step = () => {
             backgroundColor: "#3b82f6",
             opacity: isButtonDisabled() ? 0.6 : 1,
           }}
-          onClick={(e) => (step === 7 ? handleRoute(e) : handleStep(e))}
+          onClick={(e) => (step === 6 ? handleRoute(e) : handleStep(e))}
         >
-          {step === 7 ? "Voir l'estimation" : "Suivant"}
+          {step === 6 ? "Voir l'estimation" : "Suivant"}
         </button>
         {error ? (
           <p className="text-red-300 text-xs font-light lg:w-3/5 text-start ml-2">
