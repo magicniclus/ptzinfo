@@ -8,6 +8,7 @@ import { writeUserData, writeCRMUserData } from "../../firebase/dataManager";
 
 const FormulaireFinal = () => {
   const namePattern = /^(?=.*[a-zA-Z])[a-zA-Z ]{2,}$/;
+  const postalCodePattern = /^[0-9]{5}$/; // Regex pour les codes postaux français
 
   const [disabled, setIsDisabled] = useState(false);
 
@@ -17,6 +18,7 @@ const FormulaireFinal = () => {
   const [lastName, setLastName] = useState(""); // <- state pour le nom
   const [email, setEmail] = useState(""); // <- state pour l'email
   const [phone, setPhone] = useState(""); // <- state pour le téléphone
+  const [postalCode, setPostalCode] = useState(""); // <- state pour le code postal
 
   const dispatch = useDispatch();
 
@@ -53,6 +55,11 @@ const FormulaireFinal = () => {
         : "Le nom est invalide.";
     }
 
+    if (!postalCodePattern.test(postalCode)) {
+      isValid = false;
+      tempErrors.postalCode = "Le code postal est invalide.";
+    }
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       isValid = false;
@@ -86,6 +93,7 @@ const FormulaireFinal = () => {
           lastName,
           email,
           phone,
+          postalCode,
         },
       });
       writeUserData(
@@ -93,30 +101,38 @@ const FormulaireFinal = () => {
         lastName,
         email,
         phone,
+        postalCode,
         projet,
         situationProfessionnelle,
         situationPersonnelle,
         revenusFiscal,
         nbrDePart,
-        type,
-        secteur
+        type
+        // secteur
       )
         .then((res) => {
-          //TODO
+          // Ecriture des données utilisateur dans le CRM
           writeCRMUserData(
             firstName,
             lastName,
             email,
             phone,
+            postalCode,
             "M",
-            secteur,
+            // secteur,
             type,
             situationPersonnelle,
             situationProfessionnelle,
             revenusFiscal,
             nbrDePart
           );
-          router.push(`/estimation/resultat`);
+
+          // Redirection basée sur les deux premiers chiffres du code postal
+          if (postalCode.startsWith("33")) {
+            router.push(`/estimation/resultat`);
+          } else {
+            router.push(`/estimation/resultat-2`);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -125,15 +141,23 @@ const FormulaireFinal = () => {
   };
 
   useEffect(() => {
-    if (firstName && lastName && email && phone && isChecked) {
-      setIsDisabled(true);
-    } else {
-      setIsDisabled(false);
-    }
-  }, [firstName, lastName, email, phone, isChecked]);
+    setIsDisabled(
+      firstName &&
+        lastName &&
+        email &&
+        phone &&
+        postalCode &&
+        isChecked &&
+        namePattern.test(firstName) &&
+        namePattern.test(lastName) &&
+        postalCodePattern.test(postalCode) &&
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) &&
+        /^(0[1-9])(?:[ _.-]?(\d{2})){4}$/.test(phone)
+    );
+  }, [firstName, lastName, email, phone, postalCode, isChecked]);
 
   useEffect(() => {
-    if (!secteur) router.push("/");
+    if (!type) router.push("/");
   }, []);
 
   return (
@@ -199,6 +223,27 @@ const FormulaireFinal = () => {
                 autoComplete="email"
                 className={`w-full px-4 py-3 rounded-md font-light text-sm border ${
                   errors.email ? "border-red-400" : "border-gray-200"
+                }`}
+              />
+            </div>
+          </div>
+          <div className="sm:col-span-2">
+            <label
+              htmlFor="postal-code"
+              className="block text-sm font-semibold leading-6 text-gray-900"
+            >
+              Code postal
+            </label>
+            <div className="mt-2.5">
+              <input
+                type="text"
+                name="postal-code"
+                id="postal-code"
+                value={postalCode}
+                onChange={(e) => setPostalCode(e.target.value)}
+                autoComplete="postal-code"
+                className={`w-full px-4 py-3 rounded-md font-light text-sm border ${
+                  errors.postalCode ? "border-red-400" : "border-gray-200"
                 }`}
               />
             </div>
