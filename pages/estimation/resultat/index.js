@@ -33,6 +33,8 @@ const index = () => {
             href="https://explore.signature-promotion.fr/"
             className="w-[95%] h-52 bg-slate-200 rounded-lg bg-cover bg-center relative hover:shadow-md transition-all duration-300"
             style={{ backgroundImage: "url('/programme/bordeaux.jpg')" }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <div className="absolute top-1/2 right-3 transform -translate-y-[25%]">
               <img
@@ -49,6 +51,8 @@ const index = () => {
             href=" https://floirac.signature-promotion.fr/"
             className="w-[95%] h-52 bg-slate-200 rounded-lg bg-cover bg-center relative hover:shadow-md transition-all duration-300 mt-10"
             style={{ backgroundImage: "url('/programme/floirac.jpg')" }}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <div className="absolute top-1/2 right-3 transform -translate-y-[25%]">
               <img
@@ -323,6 +327,8 @@ const index = () => {
               href="https://explore.signature-promotion.fr/"
               className="w-[95%] h-52 bg-slate-200 rounded-lg bg-cover bg-center relative hover:shadow-md transition-all duration-300"
               style={{ backgroundImage: "url('/programme/bordeaux.jpg')" }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="absolute top-1/2 right-3 transform -translate-y-[25%]">
                 <img
@@ -339,6 +345,8 @@ const index = () => {
               href=" https://floirac.signature-promotion.fr/"
               className="w-[95%] h-52 bg-slate-200 rounded-lg bg-cover bg-center relative hover:shadow-md transition-all duration-300 mt-10"
               style={{ backgroundImage: "url('/programme/floirac.jpg')" }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="absolute top-1/2 right-3 transform -translate-y-[25%]">
                 <img
