@@ -28,6 +28,42 @@ const index = () => {
           Zéro (PTZ) et la TVA réduite en Zone ANRU peuvent vous ouvrir les
           portes de votre futur logement neuf.
         </p>
+        <div className="lg:w-4/12 flex lg:hidden flex-col items-end lg:mt-0 mt-10">
+          <a
+            href="https://explore.signature-promotion.fr/"
+            className="w-[95%] h-52 bg-slate-200 rounded-lg bg-cover bg-center relative hover:shadow-md transition-all duration-300"
+            style={{ backgroundImage: "url('/programme/bordeaux.jpg')" }}
+          >
+            <div className="absolute top-1/2 right-3 transform -translate-y-[25%]">
+              <img
+                src="/programme/logo-transparent.png"
+                alt="devenez"
+                className="w-10"
+              />
+            </div>
+            <div className="w-full p-2 rounded-t-lg bg-[#1D2749]/70 flex justify-center">
+              <h2 className="text-white font-semibold text-2xl">BORDEAUX</h2>
+            </div>
+          </a>
+          <a
+            href=" https://floirac.signature-promotion.fr/"
+            className="w-[95%] h-52 bg-slate-200 rounded-lg bg-cover bg-center relative hover:shadow-md transition-all duration-300 mt-10"
+            style={{ backgroundImage: "url('/programme/floirac.jpg')" }}
+          >
+            <div className="absolute top-1/2 right-3 transform -translate-y-[25%]">
+              <img
+                src="/programme/logo-transparent.png"
+                alt="devenez"
+                className="w-10"
+              />
+            </div>
+            <div className="w-full p-2 rounded-t-lg bg-[#1D2749]/70 flex justify-center">
+              <h2 className="text-white font-semibold text-2xl">
+                FLOIRAC CENTRE
+              </h2>
+            </div>
+          </a>
+        </div>
         <div className="flex lg:flex-row flex-col justify-between mt-10">
           <div className="lg:w-8/12">
             <h2 className="text-xl font-bold mb-4 ">
@@ -282,7 +318,7 @@ const index = () => {
               </table>
             </div>
           </div>
-          <div className="lg:w-4/12 flex flex-col items-end lg:mt-0 mt-10">
+          <div className="lg:w-4/12 hidden lg:flex flex-col items-end lg:mt-0 mt-10">
             <a
               href="https://explore.signature-promotion.fr/"
               className="w-[95%] h-52 bg-slate-200 rounded-lg bg-cover bg-center relative hover:shadow-md transition-all duration-300"
