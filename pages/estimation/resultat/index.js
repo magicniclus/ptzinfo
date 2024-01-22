@@ -28,7 +28,7 @@ const index = () => {
           Zéro (PTZ) et la TVA réduite en Zone ANRU peuvent vous ouvrir les
           portes de votre futur logement neuf.
         </p>
-        <div className="lg:w-4/12 flex lg:hidden flex-col items-end lg:mt-0 mt-10">
+        <div className="lg:w-4/12 flex lg:hidden flex-col items-center lg:mt-0 mt-10">
           <a
             href="https://explore.signature-promotion.fr/"
             className="w-[95%] h-52 bg-slate-200 rounded-lg bg-cover bg-center relative hover:shadow-md transition-all duration-300"
